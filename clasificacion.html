@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación - League Rayo de Luna</title>
+    <style>
+        table {
+		    font-family: 'nuffle';
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+		h1 {
+			font-family: 'nuffle', sans-serif;
+			font-weight: bold;
+            color: #fac546;		
+			font-size: 65px;
+			text-align: center;
+		}
+		@media (max-width: 1000px) {
+			h1 {
+				font-size: 40px;
+			}
+        }
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 25px;
+			}
+        }
+		.nuffle {
+			font-family: 'nuffle', sans-serif;
+			font-weight: bold;
+		}
+		.yellow {
+			color: #fac546;	
+		}
+		.menu {
+			font-size: 30px;
+		}
+		@media (max-width: 1300px) {
+			.menu {
+				font-size: 0.9rem;
+			}
+        }
+        @media (max-width: 570px) {
+			.menu {
+				font-size: 0.65rem;
+			}
+        }
+		body {
+            background-image: url('images/fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+		li {
+			font-weight: bold;
+			color: #fac546;	
+		}
+		ul {
+            list-style-type: none; /* Elimina los puntos de la lista */
+            padding: 0;
+		}
+        header {
+			display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/headerback.jpg');
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }		
+        .container {
+            display: flex;
+            height: calc(100vh - 60px); /* Ajusta la altura según el tamaño del header */
+        }
+        nav {
+            background-image: url('images/lateral.jpg');
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 1em;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        main {
+            width: 80%;
+            padding: 1em;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+			color: #ac342f;
+			font-weight: bold;
+        }
+        th {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+			color: #fac546;
+			font-weight: bold;
+            background-color: #ac342f;
+        }	
+		@font-face {
+			font-family: 'nuffle';
+			src: url('fonts/nuffle.ttf') format('truetype'),
+			font-weight: normal;
+			font-style: normal;
+		}
+		.logosize {
+			padding-right: 50px;
+			width: 15rem;
+			height: 6rem;
+		}
+		.sideimg {
+			max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+		}
+    </style>
+</head>
+	<body>
+		<header>
+			<img src="images/logo.png" class="logosize"  alt="LogoBB"><h1>Clasificación</h1>
+		</header>
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="index.html" class="nuffle yellow menu">Principal</a></li>
+					<li><a href="reglas.html" class="nuffle yellow menu">Bases</a></li>
+					<li class="nuffle yellow menu">Clasificación</li>
+					<li><a href="pairings.html" class="nuffle yellow menu">Emparejamientos</a></li>
+				</ul>
+				<img src="images/ganadores.PNG" class="sideimg" alt="ganadores">
+			</nav>
+			<main>
+				<table>
+					<thead>
+						<tr>
+							<th>Entrenador</th>
+							<th>Equipo</th>
+							<th>Ptos</th>
+							<th>Partidos Jugados</th>
+							<th>Ganados</th>
+							<th>Empatados</th>
+							<th>Perdidos</th>
+							<th>Touchdowns a favor</th>
+							<th>Touchdowns en contra</th>
+						</tr>
+					</thead>
+					<tbody>
+						<script>
+							const equipos = [
+								{"Entrenador": "Sergio", "Equipo": "Nobleza imperial", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Ruben", "Equipo": "Orcos negros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Enric", "Equipo": "Skaven", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Frank", "Equipo": "Ogros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Miguel", "Equipo": "Unión élfica", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Raúl", "Equipo": "Enanos", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Rodrigo H", "Equipo": "Norses", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Rodrigo M", "Equipo": "No muertos", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
+								{"Entrenador": "Santi", "Equipo": "Elfos oscuros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"}
+							];
+							equipos.sort((a, b) => b.Ptos - a.Ptos);
+							function quitarAcentos(str) {
+								return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+							}
+
+							function formatoPDF(str){
+								return quitarAcentos(str).toLowerCase().trim();
+							}
+							equipos.forEach(equipo => {
+								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="/PDFequipos/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
+								<td>${equipo.Ptos}</td><td>${equipo.Jugados}</td><td>${equipo.Ganados}</td><td>${equipo.Empatados}</td>
+								<td>${equipo.Perdidos}</td><td>${equipo.TA}</td><td>${equipo.TC}</td></tr>`);
+							});
+						</script>
+					</tbody>
+				</table>
+			</main>
+		</div>
+	</body>
+</html>

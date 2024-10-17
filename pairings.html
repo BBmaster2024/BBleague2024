@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pairings - League Rayo de Luna</title>
+    <style>
+        table {
+		    font-family: 'nuffle';
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+			color: #ac342f;
+			font-weight: bold;
+        }
+        th {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+			color: #fac546;
+			font-weight: bold;
+            background-color: #ac342f;
+        }	
+        .jornada {
+            margin-bottom: 40px;
+        }
+        details > summary {
+			font-family: 'nuffle';
+			padding: 4px;
+			color: #ac342f;
+			border: none;
+			box-shadow: 1px 1px 2px #ac342f;
+			cursor: pointer;
+			font-weight: bold;
+        }
+		@font-face {
+			font-family: 'nuffle';
+			src: url('fonts/nuffle.ttf') format('truetype'),
+			font-weight: normal;
+			font-style: normal;
+		}
+		h1 {
+			font-family: 'nuffle', sans-serif;
+			font-weight: bold;
+            color: #fac546;		
+			font-size: 65px;
+			text-align: center;
+		}
+		@media (max-width: 1000px) {
+			h1 {
+				font-size: 40px;
+			}
+        }
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 25px;
+			}
+        }
+		.nuffle {
+			font-family: 'nuffle', sans-serif;
+			font-weight: bold;
+		}
+		.yellow {
+			color: #fac546;	
+		}
+		.menu {
+			font-size: 30px;
+		}
+		@media (max-width: 1300px) {
+			.menu {
+				font-size: 0.9rem;
+			}
+        }
+        @media (max-width: 570px) {
+			.menu {
+				font-size: 0.65rem;
+			}
+        }
+		body {
+            background-image: url('images/fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+		.backgrey {
+            background-color: #999;
+		}
+		li {
+			font-weight: bold;
+			color: #fac546;	
+		}
+		ul {
+            list-style-type: none; /* Elimina los puntos de la lista */
+            padding: 0;
+		}
+        header {
+			display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/headerback.jpg');
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }		
+        .container {
+            display: flex;
+            height: calc(100vh - 60px); /* Ajusta la altura según el tamaño del header */
+        }
+        nav {
+            background-image: url('images/lateral.jpg');
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 1em;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        main {
+            width: 80%;
+            padding: 1em;
+        }
+		.logosize {
+			padding-right: 50px;
+			width: 15rem;
+			height: 6rem;
+		}
+    </style>
+</head>
+<body>
+		<header>
+			<img src="images/logo.png" class="logosize"  alt="LogoBB"><h1>Emparejamientos del Torneo</h1>
+		</header>
+		<div class="container">
+			<nav>
+				<ul>
+				<li><a href="index.html" class="nuffle yellow menu">Principal</a></li>
+				<li><a href="reglas.html" class="nuffle yellow menu">Bases</a></li>
+				<li><a href="clasificacion.html" class="nuffle yellow menu">Clasificación</a></li>
+				<li class="nuffle yellow menu">Emparejamientos</li>
+				</ul>
+			</nav>
+			<main>
+				<div id="emparejamientos"></div>
+				<script>
+					const jornadas = [
+						[
+							["Sergio (Nobleza imperial)", "Rubén (Orcos negros)", "pdte"],
+							["Enric (Skaven)", "Frank (Ogros)", "pdte"],
+							["Miguel (Unión élfica)", "Raúl (Enanos)", "pdte"],
+							["Rodrigo H (Norses)", "Rodrigo M (No muertos)", "pdte"],
+							["Santi (Elfos oscuros)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", " Frank (Ogros)", "pdte"],
+							["Rubén (Orcos negros)", "Raúl (Enanos)", "pdte"],
+							["Enric (Skaven)", "Rodrigo M (No muertos)", "pdte"],
+							["Rodrigo H (Norses)", "Santi (Elfos oscuros)", "pdte"],
+							["Miguel (Unión élfica)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Raúl (Enanos)", "pdte"],
+							["Frank (Ogros)", "Rodrigo M (No muertos)", "pdte"],
+							["Enric (Skaven)", "Santi (Elfos oscuros)", "pdte"],
+							["Miguel (Unión élfica)", "Rodrigo H (Norses)", "pdte"],
+							["Rubén (Orcos negros)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Rodrigo M (No muertos)", "pdte"],
+							["Frank (Ogros)", "Santi (Elfos oscuros)", "pdte"],
+							["Rubén (Orcos negros)", "Rodrigo H (Norses)", "pdte"],
+							["Enric (Skaven)", "Miguel (Unión élfica)", "pdte"],
+							["Raúl (Enanos)", "DESCANSA", ""]
+						],
+						[
+							["Rodrigo M (No muertos)", "Santi (Elfos oscuros)", "pdte"],
+							["Raúl (Enanos)", "Rodrigo H (Norses)", "pdte"],
+							["Frank (Ogros)", "Miguel (Unión élfica)", "pdte"],
+							["Rubén (Orcos negros)", "Enric (Skaven)", "pdte"],
+							["Sergio (Nobleza imperial)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Santi (Elfos oscuros)", "pdte"],
+							["Rodrigo M (No muertos)", "Miguel (Unión élfica)", "pdte"],
+							["Raúl (Enanos)", "Enric (Skaven)", "pdte"],
+							["Frank (Ogros)", "Rubén (Orcos negros)", "pdte"],
+							["Rodrigo H (Norses)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Rodrigo H (Norses)", "pdte"],
+							["Santi (Elfos oscuros)", "Miguel (Unión élfica)", "pdte"],
+							["Rodrigo M (No muertos)", "Rubén (Orcos negros)", "pdte"],
+							["Raúl (Enanos)", "Frank (Ogros)", "pdte"],
+							["Enric (Skaven)", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Miguel (Unión élfica)", "pdte"],
+							["Rodrigo H (Norses)", "Enric (Skaven)", "pdte"],
+							["Santi (Elfos oscuros)", "Rubén (Orcos negros)", "pdte"],
+							["Rodrigo M (No muertos)", "Raúl (Enanos)", "pdte"],
+							["Frank (Ogros", "DESCANSA", ""]
+						],
+						[
+							["Sergio (Nobleza imperial)", "Enric (Skaven)", "pdte"],
+							["Miguel (Unión élfica)", "Rubén (Orcos negros)", "pdte"],
+							["Rodrigo H (Norses)", "Frank (Ogros)", "pdte"],
+							["Santi (Elfos oscuros)", "Raúl (Enanos)", "pdte"],
+							["Rodrigo M (No muertos)", "DESCANSA", ""]
+						]
+					];
+
+					const emparejamientosDiv = document.getElementById('emparejamientos');
+					
+					const startDate = new Date(2024, 10, 15); // 15 de noviembre de 2024
+
+					jornadas.forEach((jornada, index) => {
+						const jornadaDiv = document.createElement('div');
+						jornadaDiv.classList.add('jornada');
+						
+						const fechaLimite = new Date(startDate);
+						fechaLimite.setMonth(startDate.getMonth() + index);
+						// a partir de enero son los días 30
+						if (index > 1) {    
+							// en febrero solo hasta el 29
+							if (index == 3) {
+								fechaLimite.setDate(28);
+							} else {
+								// meses de 30 días y meses de 31
+								if (index % 2 == 0) {
+									fechaLimite.setDate(31);
+								} else {
+									fechaLimite.setDate(30);
+								}
+							}
+						}    
+						const fechaLimiteStr = fechaLimite.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+						
+						const details = document.createElement('details');
+						const summary = document.createElement('summary');
+						summary.innerHTML = `Jornada ${index + 1} - Fecha límite: ${fechaLimiteStr}`;
+						details.appendChild(summary);
+						
+						const table = document.createElement('table');
+						const thead = document.createElement('thead');
+						thead.innerHTML = `<tr><th>Equipo 1</th><th>Equipo 2</th><th>Resultado</th></tr>`;
+						table.appendChild(thead);
+
+						const tbody = document.createElement('tbody');
+						jornada.forEach(partido => {
+							const tr = document.createElement('tr');
+							if (partido[1] === "DESCANSA") {
+								tr.style.backgroundColor = "#999";
+							} 
+							tr.innerHTML = `<td>${partido[0]}</td><td>${partido[1]}</td><td>${partido[2]}</td>`;
+							tbody.appendChild(tr);
+						});
+						table.appendChild(tbody);
+
+						details.appendChild(table);
+						const jornadalink = document.createElement('p');
+                        if(index<0){
+							jornadalink.innerHTML = `<a class="nuffle red big" href="jornada${index + 1}.html"  alt="jornada${index + 1}">Resumen de la Jornada ${index + 1}</a>`;
+                        }else{
+							jornadalink.innerHTML = `<a hidden class="nuffle red big" href="jornada${index + 1}.html"  alt="jornada${index + 1}">Resumen de la Jornada ${index + 1}</a>`;
+                        }
+						details.appendChild(jornadalink);			
+				
+						jornadaDiv.appendChild(details);
+						emparejamientosDiv.appendChild(jornadaDiv);
+					});
+
+				</script>
+			</main>
+		</div>
+
+    
+</body>
+</html>
