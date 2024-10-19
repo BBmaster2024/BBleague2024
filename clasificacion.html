@@ -149,20 +149,21 @@
 							<th>Perdidos</th>
 							<th>Touchdowns a favor</th>
 							<th>Touchdowns en contra</th>
+							<th>Heridos provocados</th>
 						</tr>
 					</thead>
 					<tbody>
 						<script>
 							const equipos = [
-								{"Entrenador": "Sergio", "Equipo": "Nobleza imperial", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
-								{"Entrenador": "Ruben", "Equipo": "Orcos negros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
-								{"Entrenador": "Enric", "Equipo": "Skaven", "Ptos": "3", "Jugados": "0'5", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "1", "TC": "0"},
-								{"Entrenador": "Frank", "Equipo": "Ogros", "Ptos": "0", "Jugados": "0'5", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "1"},
-								{"Entrenador": "Miguel", "Equipo": "Unión élfica", "Ptos": "0", "Jugados": "1", "Ganados": "0", "Empatados": "0", "Perdidos": "1", "TA": "0", "TC": "2"},
-								{"Entrenador": "Raúl", "Equipo": "Enanos", "Ptos": "5", "Jugados": "1", "Ganados": "1", "Empatados": "0", "Perdidos": "0", "TA": "2", "TC": "0"},
-								{"Entrenador": "Rodrigo H", "Equipo": "Norses", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
-								{"Entrenador": "Rodrigo M", "Equipo": "No muertos", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"},
-								{"Entrenador": "Santi", "Equipo": "Elfos oscuros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0"}
+								{"Entrenador": "Sergio", "Equipo": "Nobleza imperial", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "HP": "0"},
+								{"Entrenador": "Ruben", "Equipo": "Orcos negros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"},
+								{"Entrenador": "Enric", "Equipo": "Skaven", "Ptos": "3", "Jugados": "0'5", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "1", "TC": "0", "HP": "0"},
+								{"Entrenador": "Frank", "Equipo": "Ogros", "Ptos": "0", "Jugados": "0'5", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "1", "HP": "0"},
+								{"Entrenador": "Miguel", "Equipo": "Unión élfica", "Ptos": "0", "Jugados": "1", "Ganados": "0", "Empatados": "0", "Perdidos": "1", "TA": "0", "TC": "2", "HP": "0"},
+								{"Entrenador": "Raúl", "Equipo": "Enanos", "Ptos": "5", "Jugados": "1", "Ganados": "1", "Empatados": "0", "Perdidos": "0", "TA": "2", "TC": "0", "HP": "4"},
+								{"Entrenador": "Rodrigo H", "Equipo": "Norses", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"},
+								{"Entrenador": "Rodrigo M", "Equipo": "No muertos", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"},
+								{"Entrenador": "Santi", "Equipo": "Elfos oscuros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"}
 							];
 							equipos.sort((a, b) => b.Ptos - a.Ptos);
 							function quitarAcentos(str) {
@@ -175,7 +176,7 @@
 							equipos.forEach(equipo => {
 								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="PDFequipos/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
 								<td>${equipo.Ptos}</td><td>${equipo.Jugados}</td><td>${equipo.Ganados}</td><td>${equipo.Empatados}</td>
-								<td>${equipo.Perdidos}</td><td>${equipo.TA}</td><td>${equipo.TC}</td></tr>`);
+								<td>${equipo.Perdidos}</td><td>${equipo.TA}</td><td>${equipo.TC}</td><td>${equipo.HP}</td></tr>`);
 							});
 						</script>
 					</tbody>
