@@ -165,7 +165,22 @@
 								{"Entrenador": "Rodrigo M", "Equipo": "No muertos", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"},
 								{"Entrenador": "Santi", "Equipo": "Elfos oscuros", "Ptos": "0", "Jugados": "0", "Ganados": "0", "Empatados": "0", "Perdidos": "0", "TA": "0", "TC": "0", "HP": "0"}
 							];
-							equipos.sort((a, b) => b.Ptos - a.Ptos);
+							equipos.sort((a, b) => {
+							  // Primero se ordena por Ptos (de mayor a menor)
+							  if (b.Ptos !== a.Ptos) {
+								return b.Ptos - a.Ptos;
+							  }
+
+							  // Si hay empate en Ptos, se ordena por TA - TC (de mayor a menor)
+							  const aDiferencia = a.TA - a.TC;
+							  const bDiferencia = b.TA - b.TC;
+							  if (bDiferencia !== aDiferencia) {
+								return bDiferencia - aDiferencia;
+							  }
+
+							  // Si aún hay empate, se ordena por HP (de mayor a menor)
+							  return b.HP - a.HP;
+							});
 							function quitarAcentos(str) {
 								return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 							}
