@@ -242,7 +242,7 @@
 						
 						const details = document.createElement('details');
 						const fechaActual = new Date();
-						const fechaMasUnMes = new Date(fechaActual.setMonth(fechaActual.getMonth() + 
+						const fechaMasUnMes = new Date(fechaActual.setMonth(fechaActual.getMonth() + 1));
 						if (fechaMasUnMes > fechaLimite) {
 						  details.setAttribute('open', '');
 						}
