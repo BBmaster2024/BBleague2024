@@ -241,6 +241,11 @@
 						const fechaLimiteStr = fechaLimite.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
 						
 						const details = document.createElement('details');
+						const fechaActual = new Date();
+						if (fechaActual < fechaLimite) {
+						  details.setAttribute('open', '');
+						}
+
 						const summary = document.createElement('summary');
 						summary.innerHTML = `Jornada ${index + 1} - Fecha límite: ${fechaLimiteStr}`;
 						details.appendChild(summary);
