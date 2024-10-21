@@ -242,7 +242,7 @@
 						
 						const details = document.createElement('details');
 						const fechaActual = new Date();
-						if (fechaActual < fechaLimite) {
+						if (fechaActual > fechaLimite) {
 						  details.setAttribute('open', '');
 						}
 
