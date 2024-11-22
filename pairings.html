@@ -227,7 +227,7 @@
 							["Rodrigo M (No muertos)", "DESCANSA", ""]
 						]
 					];
-					const fechasEdited = ["Editado 11/11/2024","","","","","","","",""];
+					const fechasEdited = ["Editado 11/11/2024","Editado 22/11/2024","","","","","","",""];
 
 					const emparejamientosDiv = document.getElementById('emparejamientos');
 					
@@ -284,7 +284,7 @@
 
 						details.appendChild(table);
 						const jornadalink = document.createElement('p');
-                        if(index<1){
+                        if(index<2){
 							jornadalink.innerHTML = `<a class="nuffle red big" href="jornada${index + 1}.html"  alt="jornada${index + 1}">Resumen de la Jornada ${index + 1}</a> <span class="date">${fechasEdited[index]}</span>`;
                         }else{
 							jornadalink.innerHTML = `<a hidden class="nuffle red big" href="jornada${index + 1}.html"  alt="jornada${index + 1}">Resumen de la Jornada ${index + 1}</a> <span class="date">${fechasEdited[index]}</span>`;

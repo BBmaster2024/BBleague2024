@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-<head><!-- Google tag (gtag.js) -->
+<head>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND8WV5PLDZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -40,9 +41,6 @@
 			font-family: 'nuffle', sans-serif;
 			font-weight: bold;
 		}
-		.big {	
-			font-size: 35px;
-		}
 		.yellow {
 			color: #fac546;	
 		}
@@ -81,6 +79,12 @@
 		.red {
 			color: #ac342f;	
 		}
+		.grey {
+			color: #999999;	
+		}
+		.size2em {
+			font-size: 2em;
+		}
         header {
 			display: flex;
             justify-content: center;
@@ -106,15 +110,14 @@
             width: 80%;
             padding: 1em;
         }
-		.date {
-			color: #999999;
-			font-size: 0.6rem;
-			font-family: 'nuffle';
-		}
 		.logosize {
 			padding-right: 50px;
 			width: 15rem;
 			height: 6rem;
+		}
+		.sublogosize {
+			width: 8rem;
+			height: 8rem;
 		}
 		.sideimg {
 			max-width: 100%;
@@ -130,7 +133,7 @@
 		<div class="container">
 			<nav>
 				<ul>
-					<li class="nuffle yellow menu">Principal</li>
+					<li><a href="index.html" class="nuffle yellow menu">Principal</a></li>
 					<li><a href="reglas.html" class="nuffle yellow menu">Bases</a></li>
 					<li><a href="clasificacion.html" class="nuffle yellow menu">Clasificación</a></li>
 					<li><a href="pairings.html" class="nuffle yellow menu">Emparejamientos</a></li>
@@ -138,15 +141,38 @@
 				<img src="images/numuno.PNG" class="sideimg" alt="numuno">
 			</nav>
 			<main>
-				<p>
-					<a class="nuffle red big" href="jornada2.html"  alt="Última actualización 22/11/24">Resumen de la Jornada 2</a> <span class="date">Editado 22/11/24</span><br>
-				</p>
-				<p>
-					<a class="nuffle red big" href="jornada1.html"  alt="Última actualización 11/11/24">Resumen de la Jornada 1</a> <span class="date">Editado 11/11/24</span><br>
-				</p>
-				<p>
-					<a class="nuffle red big" href="inauguracion.html" alt="Última actualización 18/10/24">Gran Inauguración</a> <span class="date">Editado 18/10/24</span>
-				</p>
+				<!-- <br><span class="nuffle big grey">PDFs actas de partido</span></br>
+					<p><span class="nuffle red">
+						<a href="PDF/jornada1/Enric VS Frank.pdf" download>Enric VS Frank</a></br>
+						<a href="PDF/jornada1/Miguel VS Raul.pdf" download>Miguel VS Raul</a></br>
+						<a href="PDF/jornada1/RodrigoH VS Rodrigo M.pdf" download>RodrigoH VS Rodrigo M</a></br>
+						<a href="PDF/jornada1/Sergio VS Ruben.pdf" download>Sergio VS Ruben</a></br>
+					</span></p>				
+				</span>-->
+				<span class="nuffle red">
+				<br><img src="images/jimbob2.jpg" class="sideimg" alt="Jim y Bob"></br>
+				<br><span class="nuffle big grey">22/11/24</span></br>
+				<span class="nuffle red">
+					<br>-¡Comienza la segunda jornada del campeonato, Bob!</br>
+					<br><img src="images/j2/svsf12.jpg" class="sideimg" alt="svsf12"></br>
+					<br>-Y ya era hora, Jim. No es lo mismo la violencia de la serie Game of Gnomes que un buen partido de Blood Bowl.</br>
+					<br>-Ah, esa serie es adictiva.</br>
+					<br>-¿Como se presenta la jornada, Jim?</br>
+					<br>-Bueno, Bob. Los entrenadores han astado sus puntos de experiencia como han creido más conveniente y algunos jugadores empiezan a despuntar entre sus compañeros.</br>
+					<br>-¿Y de bajas como andamos, Jim?.</br>
+					<br>-En la jornada inaugural hubo varios muertos...</br>
+					<br>-¡Como debía ser, Jim!</br>
+					<br>-Eh... claro, Bob. En cualquier caso los equipos que no llegaban al minimo reglamentario despues de estas bajas han podido completar sus plantillas con jugadores itinerantes.</br>
+					<br>-Sabandijas... en mi opinion.</br>
+					<br>-Desde luego no van a ser jugadores estrella precisamente... No dudo de que los entrenadores los colocarán en las posiciones más peligrosas.</br>
+					<br>-¡Carne para la picadora!</br>					
+					<br>-Calma, Bob. Emitimos en horario infantil... volviendo al bello deporte... Se ha disputado la primera parte del encuentro entre Sergio y los Ogros de Frank.</br>
+					<br><img src="images/j2/svsf11.jpg" class="sideimg" alt="svsf11"></br>
+					<br>-No se que pensar de estos ogros, Jim. En mis tiempos no habría perdido tiempo intentando marcar haciendo florituras con los Gnoblars...</br>
+					<br>-¡¿Florituras, Bob?! No sabia que conocieras tan delicada palabra je, je, je... En cualquier caso esa jugada estará sin duda entre las aspirantes al premio "Jugada de fantasía" a final de temporada...</br>
+					<br>-¡Bah! A mi solo me interesa el premio al "Jugador más lesivo".</br>
+					<br><img src="images/j2/svsf13.jpg" class="sideimg" alt="svsf13"></br>
+				</span>
 			</main>
 		</div>
 	</body>
