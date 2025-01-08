@@ -83,7 +83,7 @@
 								return quitarAcentos(str).toLowerCase().trim();
 							}
 							equipos.forEach(equipo => {
-								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="PDF/equipos/jornada2/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
+								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="PDF/equipos/jornada3/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
 								<td>${equipo.Ptos}</td><td>${equipo.Jugados}</td><td>${equipo.Ganados}</td><td>${equipo.Empatados}</td>
 								<td>${equipo.Perdidos}</td><td>${equipo.TA}</td><td>${equipo.TC}</td><td>${equipo.HP}</td></tr>`);
 							});
