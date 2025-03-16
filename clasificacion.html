@@ -32,7 +32,7 @@
 			<main>
 				<a href="historico.html" class="nuffle red menu">Histórico de equipos</a>
 				<br>
-				<a href="jornada3.html" class="nuffle red menu">Actas/resumen Jornada3</a>
+				<a href="jornada5.html" class="nuffle red menu">Actas Jornada5</a>
 				<table>
 					<thead>
 						<tr>
@@ -85,7 +85,7 @@
 								return quitarAcentos(str).toLowerCase().trim();
 							}
 							equipos.forEach(equipo => {
-								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="PDF/equipos/jornada3/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
+								document.write(`<tr><td>${equipo.Entrenador}</td><td class="linktd"><a href="PDF/equipos/jornada5/${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf" download="${formatoPDF(equipo.Entrenador)}-${formatoPDF(equipo.Equipo)}.pdf">${equipo.Equipo}</a></td>
 								<td>${equipo.Ptos}</td><td>${equipo.Jugados}</td><td>${equipo.Ganados}</td><td>${equipo.Empatados}</td>
 								<td>${equipo.Perdidos}</td><td>${equipo.TA}</td><td>${equipo.TC}</td><td>${equipo.HP}</td></tr>`);
 							});
