@@ -63,7 +63,7 @@
 						[
 							["Rodrigo M (No muertos)", "Santi (Elfos oscuros)", "2-0"],
 							["Raúl (Enanos)", "Rodrigo H (Norses)", "0-2"],
-							["Frank (Ogros)", "Miguel (Unión élfica)", "pdte"],
+							["Frank (Ogros)", "Miguel (Unión élfica)", "1-2"],
 							["Rubén (Orcos negros)", "Enric (Skaven)", "0-3"],
 							["Sergio (Nobleza imperial)", "DESCANSA", ""]
 						],
@@ -121,7 +121,9 @@
 									fechaLimite.setDate(30);
 								}
 							}
-						}    
+						}else if (index > 5){
+							fechaLimite.setDate(15);
+						}						
 						const fechaLimiteStr = fechaLimite.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
 						
 						const details = document.createElement('details');
