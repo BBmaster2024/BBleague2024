@@ -121,7 +121,8 @@
 									fechaLimite.setDate(30);
 								}
 							}
-						}else if (index > 5){
+						}
+						if (index > 5){
 							fechaLimite.setDate(15);
 						}						
 						const fechaLimiteStr = fechaLimite.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
