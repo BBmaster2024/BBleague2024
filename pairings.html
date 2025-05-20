@@ -123,7 +123,7 @@
 							}
 						}
 						if (index > 4){
-							fechaLimite.setMonth(fechaLimite.getMonth() + 1);
+							fechaLimite.setMonth(index);
 							fechaLimite.setDate(15);
 						}						
 						const fechaLimiteStr = fechaLimite.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
