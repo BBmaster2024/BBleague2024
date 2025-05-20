@@ -107,14 +107,14 @@
 						const jornadaDiv = document.createElement('div');
 						jornadaDiv.classList.add('jornada');
 												
-						const details = document.createElement('details');
-						const fechaActual = new Date();
-						const fechaMasUnMes = new Date(fechaActual.setMonth(fechaActual.getMonth() + 1));
+						var details = document.createElement('details');
+						var fechaActual = new Date();
+						var fechaMasUnMes = new Date(fechaActual.setMonth(fechaActual.getMonth() + 1));
 						if (index = 6) {
 						  details.setAttribute('open', '');
 						}
 
-						const summary = document.createElement('summary');
+						var summary = document.createElement('summary');
 						summary.innerHTML = `Jornada ${index + 1} - Fecha límite: ${fechaLimite[index]}`;
 						details.appendChild(summary);
 						
