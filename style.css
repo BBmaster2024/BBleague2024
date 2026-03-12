@@ -1,5 +1,14 @@
+.logosizexl {
+    width: 15rem;
+    height: 15rem;
+}
 
     <style>
+	.logosizexl {
+		width: 15rem;
+		height: 15rem;
+	}
+
         table {
 		    font-family: 'nuffle';
             width: 80%;
